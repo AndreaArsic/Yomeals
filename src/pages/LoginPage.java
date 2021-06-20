@@ -31,6 +31,10 @@ public class LoginPage extends BasicPage{
 		return driver.findElement(By.name("btn_submit"));
 	}
 	
-	
+	public void userLogin (String userName, String password) {
+		this.getUsername();
+		this.getPassword();
+		this.getConfirmLoginBtn();
+	}
 
 }
