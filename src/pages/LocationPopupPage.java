@@ -4,11 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LocationPopupPage extends BasicPage{
 
-	public LocationPopupPage(WebDriver driver, JavascriptExecutor js) {
-		super(driver, js);
+	public LocationPopupPage(WebDriver driver, JavascriptExecutor js, WebDriverWait wait) {
+		super(driver, js, wait);
 	}
 
 	public WebElement getSelectLocation() {
