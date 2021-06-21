@@ -33,9 +33,13 @@ public class LoginPage extends BasicPage{
 	}
 	
 	public void userLogin (String userName, String password) {
-		this.getUsername();
-		this.getPassword();
-		this.getConfirmLoginBtn();
+		this.getUsername().clear();
+		this.getPassword().clear();
+		
+		getUsername().sendKeys(userName);
+		getPassword().sendKeys(password);
+		
+		this.getConfirmLoginBtn().click();
 	}
 
 }
