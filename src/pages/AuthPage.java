@@ -12,9 +12,6 @@ public class AuthPage extends BasicPage{
 		super(driver, js, wait);
 	}
 	
-//	●	get metode za sve potrebne elemente sa stranice   
-//	●	metodu koja odjavljuje korisnika sa sistema
-	
 	public WebElement getAccountfield() {
 		return driver.findElement(By.className("filled "));
 	}
