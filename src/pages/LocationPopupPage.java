@@ -40,8 +40,9 @@ public class LocationPopupPage extends BasicPage{
 		this.getSelectLocation().click();
 	}
 	
-	public void setLocationName(String locationName) {
+	public void setLocationName(String locationName) throws InterruptedException {
 		this.getKeyword().click();
+		Thread.sleep(2000);
 		String location = this.getLocationItem(locationName).getAttribute("data-value");
 		js.executeScript("arguments[0].value=arguments[1]", this.getLocationInput(), location);
 		js.executeScript("arguments[0]click()", this.getSubmit());

@@ -58,7 +58,7 @@ public abstract class BasicTest {
 		System.setProperty("webdriver.chrome.driver", "driver-lib\\chromedriver.exe");
 		this.driver = new ChromeDriver();
 		this.js = (JavascriptExecutor) driver;
-		this.wait = (WebDriverWait) driver;
+		this.wait = new WebDriverWait(driver, 10);
 		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
@@ -83,6 +83,9 @@ public abstract class BasicTest {
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss");
 			
 			FileUtils.copyFile(scr, new File("./screenshots/"+ldt.format(dtf)+".png"));
+			
+			Thread.sleep(2000);
+			this.driver.quit();
 		}
 	}
 	
