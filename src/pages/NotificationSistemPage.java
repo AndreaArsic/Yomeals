@@ -18,18 +18,16 @@ public class NotificationSistemPage extends BasicPage{
 	
 
 	public WebElement message() {
-		return driver.findElement(By.xpath("//*[contains(@class, 'alert--success') or contains(@class, 'alert--danger')][contains(@style,'display: block')]"));
+		return driver.findElement(By.xpath("//*[contains(@class, 'alert--success') or contains(@class, 'alert--danger')]"
+										+ "[contains(@style,'display: block')]"));
 	}
 	
 	public String returnMessage() {
-		return message().getText();
+		return driver.findElement(By.xpath("//*[contains(@class, 'alert--success') or contains(@class, 'alert--danger')][contains(@style,'display: block')]")).getText();
 	}
 	
 	
 	public void waitNotificationToDisappear() {
-//	WebDriverWait wait = new WebDriverWait (driver, 10);
-//	WebElement element = driver.findElement(By.xpath("//*[contains(@style,'display: block')])"));
-//	wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@style,'display: none')]")));
 	wait.until(ExpectedConditions.attributeContains(message(), "style", "display: none"));
 	}
 	

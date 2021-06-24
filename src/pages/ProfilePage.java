@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -48,37 +49,26 @@ public class ProfilePage extends BasicPage{
 		return city;
 	}
 	
-//	public WebElement getPhotoPath() {
-//		return 
-//	}
-	
-	public void uploadPhoto(String img) {
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//input[@type=\"file\"]")));
-		driver.findElement(By.xpath("//input[@type=\"file\"]")).sendKeys("C:\\Users\\Dell\\Desktop\\Anja\\ponic.png");
+	public WebElement getSaveBtn() {
+		return driver.findElement(By.xpath("//div[@class='row']//input[@type='submit']"));
 	}
 	
-//	public WebElement getPhotoRemove() {
-//		return driver.findElement(By.xpath("//*[class=\"avatar\"]/img"));
-//	}
+	public void uploadPhoto(String img) throws InterruptedException {
+		Actions action = new Actions(driver);
+		WebElement element = driver.findElement(By.className("avatar"));
+		action.moveToElement(element).perform();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//a[@title='Uplaod']"));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//a[@title='Uplaod']")));
+		driver.findElement(By.xpath("//input[@type=\"file\"]")).sendKeys(img);
+	}
 	
 	public void removePhoto() {
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//*[class=\"avatar\"]/img")));
-	}
-
-	public void selectCountry(String countryText) {
-		getCountry().selectByVisibleText(countryText);
-	}
-	
-	public void selectState(String stateText) {
-		getCountry().selectByVisibleText(stateText);
-	}
-	
-	public void selectCity(String cityText) {
-		getCountry().selectByVisibleText(cityText);
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//*[@title='Remove']")));
 	}
 	
 	public void profileUpdate(String firstName, String lastName, String address, String phoneNum, 
-			String zipCode, String country, String state, String city) {
+			String zipCode, String country, String state, String city) throws InterruptedException {
 		getFirstName().clear();
 		getLastName().clear();
 		getAddress().clear();
@@ -91,9 +81,15 @@ public class ProfilePage extends BasicPage{
 		getPhoneNum().sendKeys(phoneNum);
 		getZipCode().sendKeys(zipCode);
 		
-		selectCountry(country);
-		selectState(state);
-		selectCity(city);
+		Thread.sleep(1000);
+		this.getCountry().selectByVisibleText(country);
+		Thread.sleep(1000);
+		this.getState().selectByVisibleText(state);
+		Thread.sleep(1000);
+		this.getCity().selectByVisibleText(city);
+		Thread.sleep(1000);
+		
+		js.executeScript("arguments[0].click()", getSaveBtn());
 	}
 	
 	

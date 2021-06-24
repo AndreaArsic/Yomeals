@@ -49,7 +49,7 @@ public class LocationPopupPage extends BasicPage{
 	}
 	
 	public void closePopup() {
-		this.getCloseBtn().click();
+		js.executeScript("arguments[0].click()", this.getCloseBtn());
 		}
 	
 	
