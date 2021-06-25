@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-25T16:46:05 CEST" name="Default suite" finished-at="2021-06-25T16:48:27 CEST" duration-ms="141944">
+  <suite started-at="2021-06-25T19:31:16 CEST" name="Default suite" finished-at="2021-06-25T19:33:41 CEST" duration-ms="145380">
     <groups>
     </groups>
-    <test started-at="2021-06-25T16:46:05 CEST" name="Default test" finished-at="2021-06-25T16:48:27 CEST" duration-ms="141944">
+    <test started-at="2021-06-25T19:31:16 CEST" name="Default test" finished-at="2021-06-25T19:33:41 CEST" duration-ms="145380">
       <class name="tests.MealItemTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T16:46:05 CEST" name="setup" finished-at="2021-06-25T16:46:08 CEST" duration-ms="2617" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T19:31:16 CEST" name="setup" finished-at="2021-06-25T19:31:19 CEST" duration-ms="3624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addMealToCart()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T16:46:08 CEST" name="addMealToCart" finished-at="2021-06-25T16:46:41 CEST" duration-ms="33740" status="PASS">
+        <test-method signature="addMealToCart()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T19:31:19 CEST" name="addMealToCart" finished-at="2021-06-25T19:31:52 CEST" duration-ms="32901" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addMealToCart -->
-        <test-method is-config="true" signature="takeScreenshotWhenFailure(org.testng.ITestResult)[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T16:46:41 CEST" name="takeScreenshotWhenFailure" finished-at="2021-06-25T16:46:41 CEST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotWhenFailure(org.testng.ITestResult)[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T19:31:52 CEST" name="takeScreenshotWhenFailure" finished-at="2021-06-25T19:31:52 CEST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,15 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotWhenFailure -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T16:46:41 CEST" name="setup" finished-at="2021-06-25T16:46:43 CEST" duration-ms="1784" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T19:31:52 CEST" name="setup" finished-at="2021-06-25T19:31:55 CEST" duration-ms="2323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="clearCart()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T16:46:43 CEST" name="clearCart" finished-at="2021-06-25T16:47:59 CEST" duration-ms="76014" status="PASS">
+        <test-method signature="clearCart()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T19:31:55 CEST" name="clearCart" finished-at="2021-06-25T19:33:18 CEST" duration-ms="83432" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clearCart -->
-        <test-method is-config="true" signature="takeScreenshotWhenFailure(org.testng.ITestResult)[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T16:47:59 CEST" name="takeScreenshotWhenFailure" finished-at="2021-06-25T16:47:59 CEST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotWhenFailure(org.testng.ITestResult)[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T19:33:18 CEST" name="takeScreenshotWhenFailure" finished-at="2021-06-25T19:33:18 CEST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,15 +45,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotWhenFailure -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T16:47:59 CEST" name="setup" finished-at="2021-06-25T16:48:01 CEST" duration-ms="2016" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T19:33:18 CEST" name="setup" finished-at="2021-06-25T19:33:20 CEST" duration-ms="2254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addMealToFavorite()[pri:1, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T16:48:01 CEST" name="addMealToFavorite" finished-at="2021-06-25T16:48:27 CEST" duration-ms="25719" status="PASS">
+        <test-method signature="addMealToFavorite()[pri:1, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T19:33:20 CEST" name="addMealToFavorite" finished-at="2021-06-25T19:33:41 CEST" duration-ms="20762" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addMealToFavorite -->
-        <test-method is-config="true" signature="takeScreenshotWhenFailure(org.testng.ITestResult)[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T16:48:27 CEST" name="takeScreenshotWhenFailure" finished-at="2021-06-25T16:48:27 CEST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotWhenFailure(org.testng.ITestResult)[pri:0, instance:tests.MealItemTest@702b8b12]" started-at="2021-06-25T19:33:41 CEST" name="takeScreenshotWhenFailure" finished-at="2021-06-25T19:33:41 CEST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
