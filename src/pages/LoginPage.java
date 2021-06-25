@@ -17,7 +17,7 @@ public class LoginPage extends BasicPage{
 	}
 	
 	public WebElement getUsername() {
-		return driver.findElement(By.name("username"));
+		return driver.findElement(By.xpath("//*[@name='username']"));
 	}
 	
 	public WebElement getPassword() {
@@ -33,6 +33,7 @@ public class LoginPage extends BasicPage{
 	}
 	
 	public void userLogin (String userName, String password) {
+		this.getLoginBtn().click();
 		this.getUsername().clear();
 		this.getPassword().clear();
 		

@@ -15,10 +15,11 @@ public class MealPage extends BasicPage{
 	}
 	
 	public List<WebElement> getProduct(){
-		return driver.findElements(By.xpath("//*[class='featured-img']/a"));
+		return driver.findElements(By.xpath("//*[@class='featured-img']/a"));
 	}
 	
 	public WebElement getAddToCart() {
+//		return driver.findElement(By.xpath("//a[normalize-space()='Add To Cart']"));
 		return driver.findElement(By.linkText("Add To Cart"));
 	}
 	
@@ -27,11 +28,12 @@ public class MealPage extends BasicPage{
 	}
 	
 	public WebElement getFavorite() {
-		return driver.findElement(By.xpath("//*[class='product-detail-image']/a"));
+		return driver.findElement(By.xpath("//*[@class='product-detail-image']/a"));
 	}
 	
-	public void addToCart (String quantity) {
-		this.getQuantity().sendKeys(quantity);
+	public void addToCart (double quantity) throws InterruptedException {
+		js.executeScript("arguments[0].value=arguments[1]", this.getQuantity(), quantity);
+		Thread.sleep(10000);
 		this.getAddToCart().click();
 	}
 	

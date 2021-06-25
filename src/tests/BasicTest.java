@@ -1,12 +1,15 @@
 package tests;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -41,7 +44,7 @@ public abstract class BasicTest {
 	protected WebDriverWait wait;
 	
 	protected AuthPage authPage;
-	protected CartSummaryPage cartSummarypage;
+	protected CartSummaryPage cartSummaryPage;
 	protected LocationPopupPage locationPopupPage;
 	protected LoginPage loginPage;
 	protected MealPage mealPage;
@@ -65,7 +68,7 @@ public abstract class BasicTest {
 		driver.manage().window().maximize();
 		
 		authPage = new AuthPage (driver, js, wait);
-		cartSummarypage = new CartSummaryPage (driver, js, wait);
+		cartSummaryPage = new CartSummaryPage (driver, js, wait);
 		locationPopupPage = new LocationPopupPage (driver, js, wait);
 		loginPage = new LoginPage (driver, js, wait);
 		mealPage = new MealPage (driver, js, wait);
