@@ -6,6 +6,7 @@
       <class name="tests.MealItemTest">
         <methods>
           <include name="clearCart"/>
+          <include name="addMealToFavorite"/>
           <include name="setup"/>
           <include name="takeScreenshotWhenFailure"/>
         </methods>
